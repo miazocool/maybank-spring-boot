@@ -16,6 +16,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api
+	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 }
 
 tasks.named('test') {

@@ -43,3 +43,8 @@ Else -> Throw error, empty issue list, please
 - Create an issue (POST)
 - Update an issue (PUT)
 - Delete an issue (DELETE)
+
+# To remember
+'''
+to see gradle version : ./gradlew -v
+'''

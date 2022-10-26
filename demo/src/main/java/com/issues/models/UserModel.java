@@ -1,6 +1,5 @@
 package com.issues.models;
 
-import java.util.UUID;
 import javax.persistence.*;
 
 @Entity
@@ -8,7 +7,7 @@ import javax.persistence.*;
 public class UserModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
     private String name;
     private String githubId;
 
@@ -18,11 +17,18 @@ public class UserModel {
         this.githubId = githubId;
     }
 
-    public UUID getId() {
+    @Override
+    public String toString() {
+        return String.format(
+                "User[id=%d, name='%s', githubId='%s']",
+                id, name, githubId);
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

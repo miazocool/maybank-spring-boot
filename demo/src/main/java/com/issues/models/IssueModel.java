@@ -1,14 +1,13 @@
 package com.issues.models;
 
 import javax.persistence.*;
-import java.util.UUID;
 
 @Entity
 @Table(name = "issue")
 public class IssueModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    private Long id;
     private String name;
     private String description;
     private String githubIssueId;
@@ -18,12 +17,17 @@ public class IssueModel {
         this.description = description;
         this.githubIssueId = githubIssueId;
     }
-
-    public UUID getId() {
+    @Override
+    public String toString() {
+        return String.format(
+                "Issue[id=%d, name='%s', description='%s', githubIssueId='%s']",
+                id, name, description, githubIssueId);
+    }
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

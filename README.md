@@ -45,6 +45,12 @@ Else -> Throw error, empty issue list, please
 - Delete an issue (DELETE)
 
 # To remember
+
+to see gradle version : 
 '''
-to see gradle version : ./gradlew -v
+./gradlew -v
+'''
+run gradle :
+'''
+./gradlew bootRun
 '''

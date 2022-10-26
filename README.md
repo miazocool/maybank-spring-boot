@@ -1,11 +1,10 @@
 # maybank-spring-boot
-A test from maybank
+A test from maybank, the system is a view for Github Issues list.
 
-# Program flow
+## Program flow
 https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=github-issue-tracker#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1nKWw9-CcLcq73BanWV8GfszAiFp55jBl%26export%3Ddownload
 
-The system is a view for Github Issues list.
-
+## Class diagram
 private User()
 - id
 - name
@@ -17,7 +16,7 @@ private Issue()
 - description (nullable)
 - githubIssueID (nullable)
 
-Functionality:
+## Functionality:
 - Signup using github login API 
 - Fetch data from Github (GET) -> Insert all into DB
 - Create local issue? 

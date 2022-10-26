@@ -16,8 +16,8 @@ private Issue()
 
 Functionality:
 - Signup using github login API 
--- Fetch data from Github? -> Insert all into DB
--- Create local issue? -> 3
+- Fetch data from Github? -> Insert all into DB
+- Create local issue? -> 3
 - Listing of issue (either from fetch or from local created)
 - View all issues (GET from githubAPI)
 - Create an issue (POST)

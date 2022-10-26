@@ -1,18 +1,19 @@
-package com.issues.models;
+package com.issues.user;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-public class UserModel {
+public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String githubId;
 
     // standard constructors / setters / getters / toString
-    public UserModel(String name, String githubId) {
+    public User(Long id ,String name, String githubId) {
+        this.id = id;
         this.name = name;
         this.githubId = githubId;
     }

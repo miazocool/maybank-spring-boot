@@ -1,4 +1,4 @@
-package com.issues.models;
+package com.issues.issue;
 
 import javax.persistence.*;
 
@@ -9,6 +9,7 @@ public class IssueModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private Long userId;
     private String description;
     private String githubIssueId;
 

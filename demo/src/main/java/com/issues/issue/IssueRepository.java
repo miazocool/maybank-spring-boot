@@ -1,6 +1,5 @@
-package com.issues.jpa;
-
-import com.issues.models.IssueModel;
+package com.issues.issue;
+import com.issues.issue.IssueModel;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

@@ -15,11 +15,11 @@ private Issue()
 - githubIssueID (nullable)
 
 Functionality:
-1.-Signup using github login API 
-  --Fetch data from Github? -> Insert all into DB
-  --Create local issue? -> 3
-  -Listing of issue (either from fetch or from local created)
-2. View all issues (GET from githubAPI)
-3. Create an issue (POST)
-4. Update an issue (PUT)
-5. Delete an issue (DELETE)
+-Signup using github login API 
+--Fetch data from Github? -> Insert all into DB
+--Create local issue? -> 3
+-Listing of issue (either from fetch or from local created)
+-View all issues (GET from githubAPI)
+-Create an issue (POST)
+-Update an issue (PUT)
+-Delete an issue (DELETE)

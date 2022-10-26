@@ -2,7 +2,7 @@
 A test from maybank
 
 # Program flow
-https://drive.google.com/file/d/1nKWw9-CcLcq73BanWV8GfszAiFp55jBl/view?usp=sharing
+https://viewer.diagrams.net/?tags=%7B%7D&highlight=0000ff&edit=_blank&layers=1&nav=1&title=github-issue-tracker#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1nKWw9-CcLcq73BanWV8GfszAiFp55jBl%26export%3Ddownload
 
 The system is a view for Github Issues list.
 

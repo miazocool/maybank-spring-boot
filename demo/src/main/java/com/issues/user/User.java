@@ -3,17 +3,17 @@ package com.issues.user;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "dbo.user")
 public class User {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String githubId;
 
     // standard constructors / setters / getters / toString
-    public User(Long id ,String name, String githubId) {
-        this.id = id;
+    protected User() {}
+    public User(String name, String githubId) {
         this.name = name;
         this.githubId = githubId;
     }
@@ -29,10 +29,6 @@ public class User {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -43,9 +39,5 @@ public class User {
 
     public String getGithubId() {
         return githubId;
-    }
-
-    public void setGithubId(String githubId) {
-        this.githubId = githubId;
     }
 };

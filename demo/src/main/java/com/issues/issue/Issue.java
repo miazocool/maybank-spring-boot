@@ -3,8 +3,8 @@ package com.issues.issue;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "issue")
-public class IssueModel {
+@Table(name = "dbo.issue")
+public class Issue {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -12,8 +12,9 @@ public class IssueModel {
     private Long userId;
     private String description;
     private String githubIssueId;
+    protected Issue() {}
 
-    public IssueModel(String name, String description, String githubIssueId) {
+    public Issue(String name, String description, String githubIssueId) {
         this.name = name;
         this.description = description;
         this.githubIssueId = githubIssueId;

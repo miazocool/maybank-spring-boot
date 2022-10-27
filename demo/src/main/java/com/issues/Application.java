@@ -22,11 +22,11 @@ public class Application {
     public CommandLineRunner commandLineRunner(UserRepository repository) {
 
         return args -> {
-            repository.save(new User( "Zaim", ""));
-            repository.save(new User("Chloe", ""));
-            repository.save(new User("Kim", ""));
-            repository.save(new User("David", ""));
-            repository.save(new User("Michelle", ""));
+//            repository.save(new User( "Zaim", ""));
+//            repository.save(new User("Chloe", ""));
+//            repository.save(new User("Kim", ""));
+//            repository.save(new User("David", ""));
+//            repository.save(new User("Michelle", ""));
 
             // fetch all users
             log.info("Users found with findAll():");

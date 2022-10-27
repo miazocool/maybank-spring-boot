@@ -29,6 +29,10 @@ public class User {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
     }
@@ -40,4 +44,8 @@ public class User {
     public String getGithubId() {
         return githubId;
     }
+    public void setGithubId(String githubId) {
+        this.githubId = githubId;
+    }
+
 };

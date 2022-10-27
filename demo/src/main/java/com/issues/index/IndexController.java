@@ -1,17 +1,18 @@
 package com.issues.index;
 
+import com.issues.issue.IssueService;
+import com.issues.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexController {
-
+    UserService userService;
+    IssueService issueService;
     @GetMapping("/index")
-    public String index(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
-        model.addAttribute("name", name);
+    public String index(Model model) {
+        model.addAttribute("issues", issueService.getIssues());
         return "index";
     }
-
 }

@@ -29,33 +29,33 @@
             Fetch issues
         </div>
     </div>
-<!--    <div class="listing">-->
-<!--        <div>-->
-<!--            1. Issue one-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            2. Issue two-->
-<!--        </div>-->
-<!--    </div>-->
-    <table>
-        <thead>
-        <tr>
-            <th> User</th>
-            <th> Issue Id</th>
-            <th> Label </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:if="${issues.empty}">
-            <td colspan="2"> No Issues Available, please fetch, or create a local issue </td>
-        </tr>
-        <tr th:each="issue : ${issues}">
-            <td><span th:text="${issue.user}"> User </span></td>
-            <td><span th:text="${issue.issueId}"> Issue Id </span></td>
-            <td><span th:text="${issue.label}"> Label </span></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="listing">
+        <div>
+            1. Issue one
+        </div>
+        <div>
+            2. Issue two
+        </div>
+    </div>
+<!--    <table>-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th> User</th>-->
+<!--            <th> Issue Id</th>-->
+<!--            <th> Label </th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr th:if="${issues.empty}">-->
+<!--            <td colspan="2"> No Issues Available, please fetch, or create a local issue </td>-->
+<!--        </tr>-->
+<!--        <tr th:each="issue : ${issues}">-->
+<!--            <td><span th:text="${issue.user}"> User </span></td>-->
+<!--            <td><span th:text="${issue.issueId}"> Issue Id </span></td>-->
+<!--            <td><span th:text="${issue.label}"> Label </span></td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
 </div>
 </body>
 </html>

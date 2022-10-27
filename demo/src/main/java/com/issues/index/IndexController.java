@@ -12,7 +12,7 @@ public class IndexController {
     IssueService issueService;
     @GetMapping("/index")
     public String index(Model model) {
-        model.addAttribute("issues", issueService.getIssues());
+//        model.addAttribute("issues", issueService.getIssues());
         return "index";
     }
 }

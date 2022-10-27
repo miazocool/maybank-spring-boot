@@ -1,5 +1,6 @@
 package com.issues.issue;
 
+import com.issues.user.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -8,6 +9,7 @@ import java.util.Map;
 
 @Service
 public class IssueServiceImpl implements IssueService {
+    UserRepository repository;
     private static Map<Long, Issue> issueRepo = new HashMap<>();
     static {
         Issue issue = new Issue();

@@ -22,11 +22,18 @@
 <div class="container">
     <h1>Welcome to Github Issue Tracking</h1>
     <div class="action">
+        <div id="githubLogin">
+            <form action="#" th:action="@{/github-login}" th:object="${github}" method="post">
+                <label>Please enter github username</label>
+                <input type="text" th:field="*{githubId}"/>
+            </form>
+            <a th:href="@{/issues}">Create Issue</a>
+        </div>
         <div id="createButton">
-            Create issue
+            <a th:href="@{/issues}">Create Issue</a>
         </div>
         <div id="fetchButton">
-            Fetch issues
+            <a th:href="@{/issues(id=3)}">Fetch Issue</a>
         </div>
     </div>
     <div class="listing">
@@ -37,25 +44,25 @@
             2. Issue two
         </div>
     </div>
-<!--    <table>-->
-<!--        <thead>-->
-<!--        <tr>-->
-<!--            <th> User</th>-->
-<!--            <th> Issue Id</th>-->
-<!--            <th> Label </th>-->
-<!--        </tr>-->
-<!--        </thead>-->
-<!--        <tbody>-->
-<!--        <tr th:if="${issues.empty}">-->
-<!--            <td colspan="2"> No Issues Available, please fetch, or create a local issue </td>-->
-<!--        </tr>-->
-<!--        <tr th:each="issue : ${issues}">-->
-<!--            <td><span th:text="${issue.user}"> User </span></td>-->
-<!--            <td><span th:text="${issue.issueId}"> Issue Id </span></td>-->
-<!--            <td><span th:text="${issue.label}"> Label </span></td>-->
-<!--        </tr>-->
-<!--        </tbody>-->
-<!--    </table>-->
+    <!--    <table>-->
+    <!--        <thead>-->
+    <!--        <tr>-->
+    <!--            <th> User</th>-->
+    <!--            <th> Issue Id</th>-->
+    <!--            <th> Label </th>-->
+    <!--        </tr>-->
+    <!--        </thead>-->
+    <!--        <tbody>-->
+    <!--        <tr th:if="${issues.empty}">-->
+    <!--            <td colspan="2"> No Issues Available, please fetch, or create a local issue </td>-->
+    <!--        </tr>-->
+    <!--        <tr th:each="issue : ${issues}">-->
+    <!--            <td><span th:text="${issue.user}"> User </span></td>-->
+    <!--            <td><span th:text="${issue.issueId}"> Issue Id </span></td>-->
+    <!--            <td><span th:text="${issue.label}"> Label </span></td>-->
+    <!--        </tr>-->
+    <!--        </tbody>-->
+    <!--    </table>-->
 </div>
 </body>
 </html>

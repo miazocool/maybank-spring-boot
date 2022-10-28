@@ -12,7 +12,7 @@ public class Issue {
     private Long userId;
     private String description;
     private String githubIssueId;
-    protected Issue() {}
+    public Issue() {}
 
     public Issue(String name, String description, String githubIssueId) {
         this.name = name;

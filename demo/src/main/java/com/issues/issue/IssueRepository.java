@@ -7,4 +7,5 @@ public interface IssueRepository extends CrudRepository<Issue, Long> {
 
     List<Issue> findByName(String name);
     Issue findById(long id);
+    List<Issue> findByUserId(long userId);
 }

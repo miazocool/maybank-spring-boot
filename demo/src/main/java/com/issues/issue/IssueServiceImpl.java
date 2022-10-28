@@ -10,35 +10,38 @@ import java.util.Map;
 @Service
 public class IssueServiceImpl implements IssueService {
     UserRepository repository;
-    private static Map<Long, Issue> issueRepo = new HashMap<>();
-    static {
-        Issue issue = new Issue();
-        issue.setId(1l);
-        issue.setName("Koko");
-        issueRepo.put(issue.getId(), issue);
+    IssueRepository issueRepository;
+//    private static Map<Long, Issue> issueRepo = new HashMap<>();
+//    static {
+//        Issue issue = new Issue();
+//        issue.setId(1l);
+//        issue.setName("Koko");
+//        issueRepo.put(issue.getId(), issue);
+//
+//        Issue almond = new Issue();
+//        almond.setId(2l);
+//        almond.setName("Almond");
+//        issueRepo.put(almond.getId(), almond);
+//    }
 
-        Issue almond = new Issue();
-        almond.setId(2l);
-        almond.setName("Almond");
-        issueRepo.put(almond.getId(), almond);
-    }
     @Override
     public void createIssue(Issue issue) {
-        issueRepo.put(issue.getId(), issue);
+
+        issueRepository.save(issue);
     }
     @Override
     public void updateIssue(Long id, Issue issue) {
-        issueRepo.remove(id);
-        issue.setId(id);
-        issueRepo.put(id, issue);
+//        issueRepository.remove(id);
+//        issue.setId(id);
+//        issueRepository.put(id, issue);
     }
     @Override
     public void deleteIssue(Long id) {
-        issueRepo.remove(id);
+//        issueRepository.remove(id);
 
     }
     @Override
-    public Collection<Issue> getIssues() {
-        return issueRepo.values();
+    public Collection<Issue> getIssuesByUser(Long userId) {
+        return issueRepository.findByUserId(userId);
     }
 }

@@ -12,7 +12,7 @@ public class User {
     private String githubId;
 
     // standard constructors / setters / getters / toString
-    protected User() {}
+    public User() {}
     public User(String name, String githubId) {
         this.name = name;
         this.githubId = githubId;

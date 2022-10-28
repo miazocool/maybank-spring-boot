@@ -12,10 +12,10 @@ public class IssueController {
     @Autowired
     IssueService issueService;
 
-    @RequestMapping(value = "/issues")
-    public ResponseEntity<Object> getIssue() {
-        return new ResponseEntity<>(issueService.getIssues(), HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/issues")
+//    public ResponseEntity<Object> getIssue() {
+//        return new ResponseEntity<>(issueService.getIssues(), HttpStatus.OK);
+//    }
 
     @RequestMapping(value = "/issues/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Object>
@@ -35,4 +35,9 @@ public class IssueController {
         issueService.createIssue(user);
         return new ResponseEntity<>("Issue is created successfully", HttpStatus.CREATED);
     }
+    @RequestMapping(value = "/issues/{userId}")
+    public ResponseEntity<Object> getIssueByUserId(@PathVariable Long userId) {
+        return new ResponseEntity<>(issueService.getIssuesByUser(userId), HttpStatus.OK);
+    }
+
 }

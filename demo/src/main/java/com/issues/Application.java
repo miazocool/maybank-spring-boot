@@ -9,8 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import com.issues.user.UserRepository;
 
-@SpringBootApplication(scanBasePackages={
-        "com.issues.jpa"})
+@SpringBootApplication()
 public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 

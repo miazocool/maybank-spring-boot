@@ -20,19 +20,21 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to Github Issue Tracking</h1>
+    <h1>Welcome to Github Issue Tracking And it Works</h1>
+    <div class="login">
+        <form action="#" th:action="@{/github-login}" th:object="${github}" method="post">
+            <label>Please enter github username</label>
+            <input type="text" th:field="*{githubId}"/>
+        </form>
+    </div>
     <div class="action">
-        <div id="githubLogin">
-            <form action="#" th:action="@{/github-login}" th:object="${github}" method="post">
-                <label>Please enter github username</label>
-                <input type="text" th:field="*{githubId}"/>
-            </form>
+        <div class="button">
             <a th:href="@{/issues}">Create Issue</a>
         </div>
-        <div id="createButton">
-            <a th:href="@{/issues}">Create Issue</a>
+        <div class="button">
+            <a th:href="@{/issues}">Login</a>
         </div>
-        <div id="fetchButton">
+        <div class="button">
             <a th:href="@{/issues(id=3)}">Fetch Issue</a>
         </div>
     </div>

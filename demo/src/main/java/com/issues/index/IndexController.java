@@ -1,6 +1,5 @@
 package com.issues.index;
 
-import com.issues.issue.Issue;
 import com.issues.issue.IssueService;
 import com.issues.user.User;
 import com.issues.user.UserService;
@@ -8,7 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+
 @Controller
+@RequestMapping("/")
 public class IndexController {
     UserService userService;
     IssueService issueService;
@@ -20,17 +22,16 @@ public class IndexController {
         model.addAttribute("github", new User());
         return "index";
     }
-
-    //     @GetMapping("https://api.github.com/users/{username}")
-////     @ResponseBody
-//     public String index(@PathVariable String username) {
-////         model.addAttribute("issues", issueService.getIssues());
-//         issueService.getIssues();
-//         return "index";
-//     }
-    @PostMapping("/github-login")
-    public String github(@ModelAttribute User user, Model model) {
-        model.addAttribute("github", user);
-        return "result";
-    }
+//    @PostMapping("/create")
+//    public String doCreateUser(@Valid @ModelAttribute("formData") CreateUserFormData formData,
+//                               BindingResult bindingResult,
+//                               Model model) {
+//        if (bindingResult.hasErrors()) {
+//            return "users/create";
+//        }
+//
+//        userService.createUser(formData.toParameters());
+//
+//        return "redirect:/users";
+//    }
 }

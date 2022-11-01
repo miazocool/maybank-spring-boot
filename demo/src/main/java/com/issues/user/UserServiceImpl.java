@@ -1,6 +1,9 @@
 package com.issues.user;
 
 import com.issues.user.form.UserCreationParameters;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -22,30 +25,36 @@ public class UserServiceImpl implements UserService {
 //        almond.setName("Almond");
 //        userRepo.put(almond.getId(), almond);
 //    }
-    private final UserRepository repository;
+    @Autowired
+    private UserRepository repository;
     public UserServiceImpl(UserRepository repository){
         this.repository = repository;
     }
     @Override
-    public void createUser(User parameters) {
-//
-//        User user = new User(parameters.getName(), parameters.getGithubId());
-//        repository.save(user);
+    public User createUser(User parameters) {
+        User user = new User(parameters.getName(), parameters.getGithubId());
+        repository.save(user);
+        return user;
     }
     @Override
-    public void updateUser(Long id, User user) {
-//        repository.remove(id);
-//        user.setId(id);
-//        repository.put(id, user);
+    public User updateUser(Long id, User user) {
+        User updatingUser = repository.findById(id).orElse(null);
+        updatingUser.setName(user.getName());
+        updatingUser.setGithubId(user.getGithubId());
+        repository.save(updatingUser);
+        return updatingUser;
     }
     @Override
     public void deleteUser(Long id) {
-//        repository.remove(id);
+        repository.deleteById(id);
 
     }
     @Override
     public List<User> getUsers() {
-//        return repository.findAll();
-        return null;
+        return repository.findAll();
+    }
+    public Page<User> findUsersWithPagination(int offset, int pageSize){
+        Page<User> user = repository.findAll(PageRequest.of(offset, pageSize));
+        return  user;
     }
 }

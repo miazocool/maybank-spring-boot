@@ -22,17 +22,23 @@
 <div class="container">
     <h1>Welcome to Github Issue Tracking And it Works</h1>
     <div class="login">
-        <form action="#" th:action="@{/github-login}" th:object="${github}" method="post">
+        <form action="#" th:action="@{/github/login}" th:object="${github}" method="get">
             <label>Please enter github username</label>
-            <input type="text" th:field="*{githubId}"/>
+            <input type="text" th:field="*{login}"/>
+            <input type="submit" value="Submit"/>
         </form>
     </div>
+<!--    <dia class="user-info" th:object="${github_user}">-->
+<!--        <label> Succesful Login as : </label>-->
+<!--        <p th:field="*{login}"></p>-->
+<!--        <p th:field="*{url}"></p>-->
+<!--    </dia>-->
     <div class="action">
         <div class="button">
             <a th:href="@{/issues}">Create Issue</a>
         </div>
         <div class="button">
-            <a th:href="@{/issues}">Login</a>
+            <a th:href="@{/github/login}">Login</a>
         </div>
         <div class="button">
             <a th:href="@{/issues(id=3)}">Fetch Issue</a>

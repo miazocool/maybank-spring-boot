@@ -1,13 +1,10 @@
 package com.issues.index;
 
 import com.issues.issue.IssueService;
-import com.issues.user.User;
 import com.issues.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/")
@@ -19,7 +16,7 @@ public class IndexController {
     // list down the issues based on the github username
     @GetMapping("/")
     public String index(Model model) {
-        model.addAttribute("github", new User());
+        model.addAttribute("github", new GithubModel());
         return "index";
     }
 //    @PostMapping("/create")

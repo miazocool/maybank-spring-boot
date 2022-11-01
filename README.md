@@ -1,6 +1,34 @@
 # maybank-spring-boot
 A test from maybank, the system is a view for Github Issues list.
 
+# Explore API
+GET http://localhost:8080/users
+- Will get all users 
+
+POST http://localhost:8080/users
+- Will create a new user
+- JSON 
+```
+{
+  "name": "HelloTesting",
+  "githubId": "mygithubid"
+}
+```
+
+PUT http://localhost:8080/users/<id>
+- Will update user based on id provided
+```
+{
+  "name": "Mygithubidhasbeenuypdated",
+  "githubId": "testing123"
+}
+```
+DELETE http://localhost:8080/users/<id>
+- Will delete user based on id provided
+
+GET http://localhost:8080/users/<offset>/<pageSize>
+ - Will get all users by pagination from offset and pageSize
+
 # requirements 
 1. Create a Java SpringBoot Application.
 2. Project Structure is required for ease of maintainability and readability.

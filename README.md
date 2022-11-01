@@ -6,7 +6,7 @@ GET http://localhost:8080/users
 - Will get all users 
 
 POST http://localhost:8080/users
-- Will create a new user
+- Will create a new user with the following body
 ```
 {
   "name": "UserTesting123",
@@ -15,8 +15,9 @@ POST http://localhost:8080/users
 ```
 
 PUT http://localhost:8080/users/id
-- Will update user based on id provided
+- Will update user based on id and body provided
 - eg : http://localhost:8080/users/1
+- body
 ```
 {
   "name": "UserUpdated123",

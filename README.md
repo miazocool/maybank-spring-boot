@@ -9,8 +9,8 @@ POST http://localhost:8080/users
 - Will create a new user
 ```
 {
-  "name": "HelloTesting",
-  "githubId": "mygithubid"
+  "name": "UserTesting123",
+  "githubId": "githubIdTesting123"
 }
 ```
 
@@ -18,8 +18,8 @@ PUT http://localhost:8080/users/<id>
 - Will update user based on id provided
 ```
 {
-  "name": "Mygithubidhasbeenuypdated",
-  "githubId": "testing123"
+  "name": "UserUpdated123",
+  "githubId": "githubIdUpdated"
 }
 ```
 DELETE http://localhost:8080/users/<id>

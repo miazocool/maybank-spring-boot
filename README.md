@@ -14,7 +14,7 @@ POST http://localhost:8080/users
 }
 ```
 
-PUT http://localhost:8080/users/<id>
+PUT localhost:8080/users/<id>"
 - Will update user based on id provided
 ```
 {
@@ -22,10 +22,10 @@ PUT http://localhost:8080/users/<id>
   "githubId": "githubIdUpdated"
 }
 ```
-DELETE http://localhost:8080/users/<id>
+DELETE localhost:8080/users/<id>
 - Will delete user based on id provided
 
-GET http://localhost:8080/users/<offset>/<pageSize>
+GET localhost:8080/users/<offset>/<pageSize>
  - Will get all users by pagination from offset and pageSize
 
 # requirements 

@@ -14,19 +14,25 @@ POST http://localhost:8080/users
 }
 ```
 
-PUT localhost:8080/users/<id>"
+PUT http://localhost:8080/users/id
 - Will update user based on id provided
+- eg : http://localhost:8080/users/1
 ```
 {
   "name": "UserUpdated123",
   "githubId": "githubIdUpdated"
 }
 ```
-DELETE localhost:8080/users/<id>
+DELETE http://localhost:8080/users/id
 - Will delete user based on id provided
+- eg : http://localhost:8080/users/1
 
-GET localhost:8080/users/<offset>/<pageSize>
- - Will get all users by pagination from offset and pageSize
+GET http://localhost:8080/users/offset/pageSize
+- Will get all users by pagination from offset and pageSize
+- eg http://localhost:8080/users/0/5
+- will get the first 5 elements
+- eg http://localhost:8080/users/1/5
+- will get 6th until 10th element
 
 # requirements 
 1. Create a Java SpringBoot Application.

@@ -7,7 +7,6 @@ GET http://localhost:8080/users
 
 POST http://localhost:8080/users
 - Will create a new user
-- JSON 
 ```
 {
   "name": "HelloTesting",

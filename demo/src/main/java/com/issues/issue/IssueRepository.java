@@ -1,11 +1,6 @@
 package com.issues.issue;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-public interface IssueRepository extends CrudRepository<Issue, Long> {
-
-    List<Issue> findByName(String name);
+public interface IssueRepository extends JpaRepository<Issue, Long> {
     Issue findById(long id);
-    List<Issue> findByUserId(long userId);
 }

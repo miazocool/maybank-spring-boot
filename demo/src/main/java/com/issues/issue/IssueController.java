@@ -35,9 +35,9 @@ public class IssueController {
         issueService.createIssue(user);
         return new ResponseEntity<>("Issue is created successfully", HttpStatus.CREATED);
     }
-    @RequestMapping(value = "/issues/{userId}")
-    public ResponseEntity<Object> getIssueByUserId(@PathVariable Long userId) {
-        return new ResponseEntity<>(issueService.getIssuesByUser(userId), HttpStatus.OK);
-    }
+//    @RequestMapping(value = "/issues/{userId}")
+//    public ResponseEntity<Object> getIssueByUserId(@PathVariable Long userId) {
+//        return new ResponseEntity<>(issueService.getIssuesByUser(userId), HttpStatus.OK);
+//    }
 
 }

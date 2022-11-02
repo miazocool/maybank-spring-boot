@@ -1,4 +1,4 @@
-package com.issues.index;
+package com.issues.github;
 
 import com.issues.issue.Issue;
 import com.issues.issue.IssueService;

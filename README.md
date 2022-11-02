@@ -35,6 +35,18 @@ GET http://localhost:8080/users/offset/pageSize
 - eg http://localhost:8080/users/1/5
 - will get 6th until 10th element
 
+GET http://localhost:8080/login/githubUsername
+- Will get the current user info
+- The github profile must be public
+- eg http://localhost:8080/login/miazocool
+
+GET http://localhost:8080/github/fetch-issue/githubUsername/repositoryName
+- Will get all the issues belonging to github username and github repo
+- The repo and user must be public available
+- eg: http://localhost:8080/github/fetch-issue/miazocool/maybank-spring-boot
+- after fetching from github, will later insert into issue table.
+
+
 # requirements 
 1. Create a Java SpringBoot Application.
 2. Project Structure is required for ease of maintainability and readability.

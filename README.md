@@ -3,6 +3,7 @@ A test from maybank, the system is a view for Github Issues list.
 
 ## NOTES
 - log file is located at \maybank-spring-boot\demo
+- rdbms used is mssql, the name of db is testdb
 
 # Explore API
 GET http://localhost:8080/users

@@ -3,7 +3,7 @@ package com.issues.index;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dbo.github")
+@Table(name = "github")
 public class GithubModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

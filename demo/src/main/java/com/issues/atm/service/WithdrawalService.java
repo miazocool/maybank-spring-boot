@@ -32,17 +32,19 @@ public class WithdrawalService {
     public WithdrawalAcknowledgement withdrawMoney (WithdrawRequest request) {
 
         ClientTransactionHistory history = request.getTransactionHistory();
-        history = historyRepository.save(history);
-
         Transaction transactionInfo = request.getTransaction();
 
-        this.validateWithdrawal(transactionInfo.getAccountNo(), history.getCurrent_amount());
+        history.setCurrentAmount(history.getCurrentAmount()- transactionInfo.getAmount());
+        historyRepository.save(history);
+
+        validateWithdrawal(transactionInfo.getAmount(), history.getCurrentAmount());
+
         transactionRepository.save(transactionInfo);
-        return new WithdrawalAcknowledgement("SUCCESS");
+        return new WithdrawalAcknowledgement("SUCCESS", history);
 
     }
-    public static boolean validateWithdrawal(String accNo, double withdrawalAmount) {
-        if (withdrawalAmount > paymentMap.get(accNo)) {
+    public static boolean validateWithdrawal(int requestAmount, int currentAmount) {
+        if (requestAmount > currentAmount) {
             throw new InsufficientAmountException("insufficient fund..!");
         } else {
             return true;

@@ -3,7 +3,7 @@ package com.issues.issue;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dbo.issue")
+@Table(name = "issue")
 public class Issue {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

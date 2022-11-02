@@ -1,6 +1,5 @@
 package com.issues;
 
-import com.issues.user.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -28,29 +27,29 @@ public class Application {
 //            repository.save(new User("Michelle", ""));
 
             // fetch all users
-            log.info("Users found with findAll():");
-            log.info("-------------------------------");
-            for (User user : repository.findAll()) {
-                log.info(user.toString());
-            }
-            log.info("");
-            // fetch an individual user by ID
-            User user = repository.findById(1L);
-            log.info("User found with findById(1L):");
-            log.info("--------------------------------");
-            log.info(user.toString());
-            log.info("");
-
-            // fetch users by name
-            log.info("User found with findName('Bauer'):");
-            log.info("--------------------------------------------");
-            repository.findByName("Zaim").forEach(bauer -> {
-                log.info(bauer.toString());
-            });
-            // for (User bauer : repository.findByLastName("Bauer")) {
-            //  log.info(bauer.toString());
-            // }
-            log.info("");
+//            log.info("Users found with findAll():");
+//            log.info("-------------------------------");
+//            for (User user : repository.findAll()) {
+//                log.info(user.toString());
+//            }
+//            log.info("");
+//            // fetch an individual user by ID
+//            User user = repository.findById(1L);
+//            log.info("User found with findById(1L):");
+//            log.info("--------------------------------");
+//            log.info(user.toString());
+//            log.info("");
+//
+//            // fetch users by name
+//            log.info("User found with findName('Bauer'):");
+//            log.info("--------------------------------------------");
+//            repository.findByName("Zaim").forEach(bauer -> {
+//                log.info(bauer.toString());
+//            });
+//            // for (User bauer : repository.findByLastName("Bauer")) {
+//            //  log.info(bauer.toString());
+//            // }
+//            log.info("");
 //			System.out.println("Let's inspect the beans provided by Spring Boot:");
 
 //			String[] beanNames = ctx.getBeanDefinitionNames();

@@ -3,7 +3,7 @@ package com.issues.user;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dbo.user")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

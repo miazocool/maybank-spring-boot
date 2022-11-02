@@ -1,26 +1,26 @@
 package com.issues.atm.history;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "history_transactions")
 public class ClientTransactionHistory {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
-    private int current_amount;
+    private int currentAmount;
 
     // standard constructors / setters / getters / toString
     public ClientTransactionHistory() {}
     public ClientTransactionHistory(String name, String type) {
-        this.current_amount = current_amount;
+        this.currentAmount = currentAmount;
     }
 
     @Override
     public String toString() {
         return String.format(
-                "ClientTransactionHistory[id=%d, current_amount='%s']",
-                id, current_amount);
+                "ClientTransactionHistory[id=%d, currentAmount='%s']",
+                id, currentAmount);
     }
 
     public Long getId() {
@@ -31,11 +31,11 @@ public class ClientTransactionHistory {
         this.id = id;
     }
 
-    public int getCurrent_amount() {
-        return current_amount;
+    public int getCurrentAmount() {
+        return currentAmount;
     }
 
-    public void setCurrent_amount(int current_amount) {
-        this.current_amount = current_amount;
+    public void setCurrentAmount(int currentAmount) {
+        this.currentAmount = currentAmount;
     }
 }

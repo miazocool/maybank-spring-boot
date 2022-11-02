@@ -1,16 +1,16 @@
 package com.issues.atm.transaction;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "transactions")
 public class Transaction {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
     private String type;
     private String accountNo;
-    private String amount;
+    private int amount;
 
     // standard constructors / setters / getters / toString
     public Transaction() {}
@@ -49,11 +49,11 @@ public class Transaction {
         this.accountNo = accountNo;
     }
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 }

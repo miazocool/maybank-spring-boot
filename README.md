@@ -1,5 +1,5 @@
 # maybank-spring-boot
-A test from maybank, the system is a view for Github Issues list.
+A test from maybank
 
 ## NOTES
 - log file is located at \maybank-spring-boot\demo

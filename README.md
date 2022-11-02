@@ -1,6 +1,9 @@
 # maybank-spring-boot
 A test from maybank, the system is a view for Github Issues list.
 
+## NOTES
+- log file is located at \maybank-spring-boot\demo
+
 # Explore API
 GET http://localhost:8080/users
 - Will get all users 
